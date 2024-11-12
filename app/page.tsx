@@ -131,7 +131,7 @@ export default function Home() {
                                         animationSpeed={5}
                                         containerClassName="bg-sky-600"
                                         colors={[[125, 211, 252]]}
-                                        dotSize={3}
+                                        dotSize={5}
                                     />
                                     {/* Radial gradient for the fade effect */}
                                     <div
