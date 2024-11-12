@@ -25,7 +25,10 @@ export const Navbar = ({
 
     useMotionValueEvent(scrollYProgress, "change", (current) => {
         if (typeof current === "number") {
-            let direction = current - scrollYProgress.getPrevious();
+            // Get the previous value with a fallback to 0 if undefined
+            const previous = scrollYProgress.getPrevious() ?? 0;
+            let direction = current - previous;
+
             if (scrollYProgress.get() < 0.05) {
                 setVisible(false);
             } else {

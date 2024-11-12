@@ -1,30 +1,31 @@
-"use client"
+"use client";
 
 // layout file
 import './globals.css';
 import { Inter } from '@next/font/google';
-import { useState, useEffect } from 'react';
+import { ReactNode, useState, useEffect } from 'react';
 import LoadingScreen from "@/components/loading";
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
-
 
 const inter = Inter({ subsets: ['latin'] });
 const navItems = [
     { name: "Home", link: "/" },
     { name: "About", link: "/about" },
-    { name: "Contact", link: "/contact"},
+    { name: "Contact", link: "/contact" },
 ];
 
-export default function RootLayout({ children }) {
+interface RootLayoutProps {
+    children: ReactNode;
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        // Check if the document is already loaded
         if (document.readyState === 'complete') {
             setIsLoading(false);
         } else {
-            // Listen for the window load event
             window.addEventListener('load', () => {
                 setIsLoading(false);
             });
