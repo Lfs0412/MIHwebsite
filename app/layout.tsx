@@ -2,12 +2,12 @@
 
 // layout file
 import './globals.css';
-import { Inter } from 'next/font/google';
+import { Inter } from '@next/font/google';
 import { useState, useEffect } from 'react';
 import LoadingScreen from "@/components/loading";
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
-import {Home, Info, Mail} from "lucide-react";
+
 
 const inter = Inter({ subsets: ['latin'] });
 const navItems = [
