@@ -27,8 +27,8 @@ export const AuroraBackground = ({
               [background-image:var(--aurora)]
               dark:[background-image:var(--aurora)]
               [background-size:200%]
-              [background-position:50%_50%]
-              filter blur-[4px] invert dark:invert-0
+          
+             
               absolute -inset-[5px] opacity-50 will-change-transform`,
                             showRadialGradient &&
                             `[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,var(--transparent)_70%)]`,

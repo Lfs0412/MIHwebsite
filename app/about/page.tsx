@@ -14,7 +14,7 @@ export default function AboutPage() {
         <div className="min-h-screen">
             {/* Hero and Vision/Mission/Values Section */}
             <div className="relative">
-                <AuroraBackground className="z-50">
+                <AuroraBackground>
                     {/* Hero Section */}
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}
